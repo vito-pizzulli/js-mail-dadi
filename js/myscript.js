@@ -33,6 +33,9 @@ mailCheckButton.addEventListener('click',
 const diceRollButton = document.querySelector('button.dice-roll-button');
 const matchBox = document.querySelector("div.match-section");
 let matchNumber = 0;
+let winResults = 0;
+let loseResults = 0;
+let tieResults = 0;
 
 /* Gioco dei dadi */
 diceRollButton.addEventListener('click',
@@ -54,10 +57,17 @@ diceRollButton.addEventListener('click',
 
         if (playerNumber == computerNumber) {
             gameResults.append("E' un pareggio!");
+            tieResults++;
         } else if (playerNumber > computerNumber) {
             gameResults.append("Hai vinto!");
+            winResults++;
         } else {
             gameResults.append("Hai perso!");
+            loseResults++;
         }
+
+        let globalResults = document.createElement('p');
+        matchBox.append(globalResults);
+        globalResults.append("Classifica - Vittorie: " + winResults + ". " + "Sconfitte: " + loseResults + ". " + "Pareggi: " + tieResults+ ".");
     }
 )
