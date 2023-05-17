@@ -1,17 +1,3 @@
-/* Gioco dei dadi */
-let playerNumber = Math.floor((Math.random() * 6) + 1);
-let computerNumber = Math.floor((Math.random() * 6) + 1);
-console.log("Il numero del tuo dado è " + playerNumber);
-console.log("Il numero del dado dell'avversario è " + computerNumber);
-
-if (playerNumber == computerNumber) {
-    console.log("E' un pareggio!");
-} else if (playerNumber > computerNumber) {
-    console.log("Hai vinto!");
-} else {
-    console.log("Hai perso!");
-}
-
 /* Mail */
 const mailList = [
     "cloud.strife@gmail.com",
@@ -19,9 +5,10 @@ const mailList = [
     "aerith.gainsborough@gmail.com"
 ]
 
-const button = document.querySelector('button');
+const mailCheckButton = document.querySelector('button.mail-check-button');
+const diceGame = document.querySelector("div.dice-game");
 
-button.addEventListener('click',
+mailCheckButton.addEventListener('click',
     function() {
         let access = false;
         const userMail = document.getElementById('userMail').value;
@@ -33,9 +20,45 @@ button.addEventListener('click',
         }
 
         if (access === true) {
-            document.getElementById("output").innerHTML = "Accesso consentito";
+            document.getElementById("mail-output").innerHTML = "Accesso consentito";
+            diceGame.classList.remove('d-none');
+            diceGame.classList.add('d-block');
         } else {
-            document.getElementById("output").innerHTML = "Accesso negato";
+            document.getElementById("mail-output").innerHTML = "Accesso negato";
+            diceGame.classList.remove('d-block');
+            diceGame.classList.add('d-none');
+        }
+    }
+)
+
+const diceRollButton = document.querySelector('button.dice-roll-button');
+const matchBox = document.querySelector("div.match-box");
+let matchNumber = 0;
+
+/* Gioco dei dadi */
+diceRollButton.addEventListener('click',
+    function() {
+        matchNumber++;
+        let matchNumberOutput = document.createElement('h3');
+        matchNumberOutput.append ("Partita numero" + " " + matchNumber);
+        matchBox.append(matchNumberOutput);
+        const playerNumber = Math.floor((Math.random() * 6) + 1);
+        const computerNumber = Math.floor((Math.random() * 6) + 1);
+        let playerNumberOutput = document.createElement('p');
+        let computerNumberOutput = document.createElement('p');
+        playerNumberOutput.append("Il numero del tuo dado è" + " " + playerNumber + ".");
+        computerNumberOutput.append("Il numero del dado del tuo avversario è" + " " + computerNumber + ".");
+        matchBox.append(playerNumberOutput);
+        matchBox.append(computerNumberOutput);
+        let gameResults = document.createElement('p');
+        matchBox.append(gameResults);
+
+        if (playerNumber == computerNumber) {
+            gameResults.append("E' un pareggio!");
+        } else if (playerNumber > computerNumber) {
+            gameResults.append("Hai vinto!");
+        } else {
+            gameResults.append("Hai perso!");
         }
     }
 )

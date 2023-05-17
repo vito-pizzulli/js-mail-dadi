@@ -1,0 +1,35 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 1rem;
+}
+
+h1 {
+    margin: 2rem 0;
+}
+
+h2, h3 {
+    margin: 1rem 0;
+}
+
+p {
+    margin: .5rem 0;
+}
+
+button {
+    padding: .3rem 1rem;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}

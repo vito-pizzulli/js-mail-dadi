@@ -5,15 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mail Dadi</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts Montserrat 100-300-400-500-700 & Cedarville Cursive 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <main>
-        <h1>Gioco dei dadi</h1>
-        <p>Prima di giocare, è necessario effettuare l'accesso con una mail autorizzata.</p>
-        <label for="userMail">Inserisci la tua mail:</label>
-        <input type="text" id="userMail" name="userMail">
-        <button>Verifica</button>
-        <pre id="output"></pre>
+
+        <div class="mail-check">
+            <h1>Gioco dei dadi</h1>
+            <h2>Accesso</h2>
+            <p>Prima di giocare, è necessario effettuare l'accesso con una mail autorizzata.</p>
+            <label for="userMail">Inserisci la tua mail:</label>
+            <input type="text" id="userMail" name="userMail">
+            <button class="mail-check-button">Verifica</button>
+            <h3 id="mail-output"></h3>
+        </div>
+
+        <div class="dice-game d-none">
+            <h2>Si gioca!</h2>
+            <p>Puoi effettuare più di una partita, basta cliccare nuovamente su "Gira i dadi!"</p>
+            <button class="dice-roll-button">
+                Gira i dadi!
+            </button>
+            <div class="match-box">
+                
+            </div>
+        </div>
+
     </main>
     <script src="js/myscript.js"></script>
 </body>
