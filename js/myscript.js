@@ -58,7 +58,7 @@ diceRollButton.addEventListener('click',
         matchBox.append(gameResults);
 
         if (playerNumber == computerNumber) {
-            gameResults.append("E' un pareggio!");
+            gameResults.append("Pareggio!");
             tieResults++;
         } else if (playerNumber > computerNumber) {
             gameResults.append("Hai vinto!");
@@ -71,8 +71,5 @@ diceRollButton.addEventListener('click',
         let globalResults = document.createElement('p');
         matchBox.append(globalResults);
         globalResults.append("Classifica - Vittorie: " + winResults + ". " + "Sconfitte: " + loseResults + ". " + "Pareggi: " + tieResults+ ".");
-
-        let horizontalRule = document.createElement('hr');
-        matchBox.append(horizontalRule);
     }
 )
