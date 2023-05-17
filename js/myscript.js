@@ -5,9 +5,9 @@ const mailList = [
     "aerith.gainsborough@gmail.com"
 ]
 
-const mailCheck = document.querySelector('div.mail-check');
+const mailCheck = document.querySelector('div.mail-check-section');
 const mailCheckButton = document.querySelector('button.mail-check-button');
-const diceGame = document.querySelector("div.dice-game");
+const diceGame = document.querySelector("div.dice-game-section");
 
 mailCheckButton.addEventListener('click',
     function() {
@@ -31,7 +31,7 @@ mailCheckButton.addEventListener('click',
 )
 
 const diceRollButton = document.querySelector('button.dice-roll-button');
-const matchBox = document.querySelector("div.match-box");
+const matchBox = document.querySelector("div.match-section");
 let matchNumber = 0;
 
 /* Gioco dei dadi */
@@ -39,14 +39,14 @@ diceRollButton.addEventListener('click',
     function() {
         matchNumber++;
         let matchNumberOutput = document.createElement('h3');
-        matchNumberOutput.append ("Partita numero" + " " + matchNumber);
+        matchNumberOutput.append ("Partita #" + " " + matchNumber);
         matchBox.append(matchNumberOutput);
         const playerNumber = Math.floor((Math.random() * 6) + 1);
         const computerNumber = Math.floor((Math.random() * 6) + 1);
         let playerNumberOutput = document.createElement('p');
         let computerNumberOutput = document.createElement('p');
         playerNumberOutput.append("Il numero del tuo dado è" + " " + playerNumber + ".");
-        computerNumberOutput.append("Il numero del dado del tuo avversario è" + " " + computerNumber + ".");
+        computerNumberOutput.append("Il numero del dado avversario è" + " " + computerNumber + ".");
         matchBox.append(playerNumberOutput);
         matchBox.append(computerNumberOutput);
         let gameResults = document.createElement('p');
