@@ -41,6 +41,7 @@ let tieResults = 0;
 /* Gioco dei dadi */
 diceRollButton.addEventListener('click',
     function() {
+        matchBox.innerHTML = " ";
         matchNumber++;
         let matchNumberOutput = document.createElement('h3');
         matchNumberOutput.append ("Partita #" + " " + matchNumber);
