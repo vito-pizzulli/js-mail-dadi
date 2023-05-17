@@ -6,7 +6,7 @@
 }
 
 main {
-    background-image: url(..//img/casino.gif);
+    background-image: url(..//img/mario.gif);
     background-size: cover;
     background-attachment: fixed;
     font-size: 1.2rem;
@@ -28,7 +28,7 @@ main {
 }
 
 h1 {
-    color: #e06020;
+    color: #d81f20;
     font-family: 'VT323', monospace;
     font-size: 4rem;
 }
@@ -64,12 +64,12 @@ button {
     color: white;
     border-radius: 20px;
     font-size: 1.2rem;
-    border: 3px solid transparent;
+    border: 3px solid #e8e4ba;
     transition: all .5s;
 }
 
 button:hover {
-    border: 3px solid #e8e4ba;
+    background-color: #002b63;
 }
 
 .d-none {
@@ -82,6 +82,26 @@ button:hover {
 
 .mb-1rem {
     margin-bottom: 1rem;
+}
+
+.text-win {
+    color: #51df05;
+    font-size: 1.5rem;
+}
+
+.text-lose {
+    color: #ff0000;
+    font-size: 1.5rem;
+}
+
+.text-tie {
+    color: #ffbf00;
+    font-size: 1.5rem;
+}
+
+.text-results {
+    color: yellow;
+    font-size: 1.5rem;
 }
 
 

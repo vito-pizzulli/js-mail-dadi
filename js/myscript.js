@@ -59,17 +59,21 @@ diceRollButton.addEventListener('click',
 
         if (playerNumber == computerNumber) {
             gameResults.append("Pareggio!");
+            gameResults.classList.add('text-tie');
             tieResults++;
         } else if (playerNumber > computerNumber) {
             gameResults.append("Hai vinto!");
+            gameResults.classList.add('text-win');
             winResults++;
         } else {
             gameResults.append("Hai perso!");
+            gameResults.classList.add('text-lose');
             loseResults++;
         }
 
         let globalResults = document.createElement('p');
         matchBox.append(globalResults);
+        globalResults.classList.add("text-results")
         globalResults.append("Classifica - Vittorie: " + winResults + ". " + "Sconfitte: " + loseResults + ". " + "Pareggi: " + tieResults+ ".");
     }
 )
