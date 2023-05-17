@@ -19,17 +19,23 @@ const mailList = [
     "aerith.gainsborough@gmail.com"
 ]
 
-let access = false;
-const userMail = prompt("Inserisci la tua mail");
+const button = document.querySelector('button');
 
-for (let i = 0; i < mailList.length; i++) {
-    if (userMail === mailList[i]) {
-        access = true;
+button.addEventListener('click',
+    function() {
+        let access = false;
+        const userMail = document.getElementById('userMail').value;
+
+        for (let i = 0; i < mailList.length; i++) {
+            if (userMail === mailList[i]) {
+                access = true;
+            }
+        }
+
+        if (access === true) {
+            document.getElementById("output").innerHTML = "Accesso consentito";
+        } else {
+            document.getElementById("output").innerHTML = "Accesso negato";
+        }
     }
-}
-
-if (access === true) {
-    console.log("Accesso consentito");
-} else {
-    console.log("Accesso negato");
-}
+)
