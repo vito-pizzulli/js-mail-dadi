@@ -1,8 +1,8 @@
 /* Mail */
 const mailList = [
-    "cloud.strife@gmail.com",
-    "tifa.lockhart@outlook.com",
-    "aerith.gainsborough@gmail.com"
+    "mario@mushroom.com",
+    "luigi@fireflower.com",
+    "peach@toadstool.com"
 ]
 
 const mailCheck = document.querySelector('div.mail-check-section');
