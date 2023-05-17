@@ -5,6 +5,7 @@ const mailList = [
     "aerith.gainsborough@gmail.com"
 ]
 
+const mailCheck = document.querySelector('div.mail-check');
 const mailCheckButton = document.querySelector('button.mail-check-button');
 const diceGame = document.querySelector("div.dice-game");
 
@@ -20,13 +21,11 @@ mailCheckButton.addEventListener('click',
         }
 
         if (access === true) {
-            document.getElementById("mail-output").innerHTML = "Accesso consentito";
+            mailCheck.classList.add('d-none');
             diceGame.classList.remove('d-none');
             diceGame.classList.add('d-block');
         } else {
             document.getElementById("mail-output").innerHTML = "Accesso negato";
-            diceGame.classList.remove('d-block');
-            diceGame.classList.add('d-none');
         }
     }
 )
