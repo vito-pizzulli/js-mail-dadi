@@ -7,10 +7,10 @@
     <title>Gioco dei dadi</title>
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Google Fonts Montserrat 100-300-400-500-700 & Cedarville Cursive 400 -->
+    <!-- Open Sans Regular 400 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -18,18 +18,18 @@
 
         <div class="mail-check-section">
             <h1>Gioco dei dadi</h1>
-            <h2>Accesso</h2>
-            <p>Prima di giocare, è necessario effettuare l'accesso con una mail autorizzata.</p>
+            <h2>Login</h2>
+            <p>Per giocare è necessario effettuare l'accesso con una mail autorizzata.</p>
             <label for="userMail">Inserisci la tua mail:</label>
-            <input type="text" id="userMail" name="userMail">
+            <input type="text" id="userMail" name="userMail" class="mb-1rem"><br>
             <button class="mail-check-button">Verifica</button>
             <h3 id="mail-output"></h3>
         </div>
 
         <div class="dice-game-section d-none">
-            <h2>Accesso consentito, ora puoi giocare!</h2>
+            <h2>Si gioca!</h2>
             <h3>Regole</h3>
-            <p>Cliccando su "Nuova partita", il tuo dado e quello del tuo avversario verranno lanciati in automatico, e ognuno di voi effettuerà un punteggio da 1 a 6.<br>Vince chi effettua il punteggio più alto!</p>
+            <p class="mb-1rem">Cliccando su "Nuova partita", il tuo dado e quello del tuo avversario verranno lanciati in automatico, e ognuno di voi effettuerà un punteggio da 1 a 6.<br>Vince chi effettua il punteggio più alto!</p>
             <button class="dice-roll-button">
                 Nuova partita
             </button>

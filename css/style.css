@@ -6,24 +6,74 @@
 }
 
 main {
-    font-family: 'Montserrat', sans-serif;
-    padding: 0 1rem;
+    background-image: url(..//img/casino.gif);
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 1.2rem;
+    padding: 1rem;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    height: 100vh;
+    overflow: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.mail-check-section,
+.dice-game-section {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 1rem;
+    border-radius: 50px;
 }
 
 h1 {
-    margin: 2rem 0;
+    margin-bottom: 2rem;
+    color: #e06020;
 }
 
 h2, h3 {
     margin: 1rem 0;
 }
 
+h2 {
+    color: #dca914;
+}
+
+h3 {
+    color: #f5e47a;
+}
+
+hr {
+    border: 1px solid white;
+}
+
 p {
-    margin: .5rem 0;
+    margin-bottom: .5rem;
+}
+
+input {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-size: 1rem;
+    border: 1px solid white;
+    padding: .2rem 1rem;
 }
 
 button {
     padding: .3rem 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    border: 3px solid transparent;
+    transition: all .5s;
+}
+
+button:hover {
+    border: 3px solid white;
 }
 
 .d-none {
@@ -32,4 +82,45 @@ button {
 
 .d-block {
     display: block;
+}
+
+.mb-1rem {
+    margin-bottom: 1rem;
+}
+
+
+/* Responsive Layouts */
+
+/* XS Layout (from 0px to 576px */
+@media screen and (max-width: 576px) {
+    main {
+        background-position: center;
+    }
+
+    .mail-check-section,
+    .dice-game-section {
+        width: 100%;
+}
+}
+
+/* 2K Layout (from 2560px to 3840px */
+@media screen and (min-width: 2560px) {
+    html {
+        font-size: 30px;
+    }
+
+    hr {
+        border: 2px solid white;
+    }
+}
+
+/* 4K Layout (from 3840px to higher resolutions */
+@media screen and (min-width: 3840px) {
+    html {
+        font-size: 40px;
+    }
+
+    hr {
+        border: 3px solid white;
+    }
 }

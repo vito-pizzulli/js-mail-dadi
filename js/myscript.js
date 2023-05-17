@@ -21,6 +21,7 @@ mailCheckButton.addEventListener('click',
         }
 
         if (access === true) {
+            alert("Accesso consentito!")
             mailCheck.classList.add('d-none');
             diceGame.classList.remove('d-none');
             diceGame.classList.add('d-block');
@@ -69,5 +70,8 @@ diceRollButton.addEventListener('click',
         let globalResults = document.createElement('p');
         matchBox.append(globalResults);
         globalResults.append("Classifica - Vittorie: " + winResults + ". " + "Sconfitte: " + loseResults + ". " + "Pareggi: " + tieResults+ ".");
+
+        let horizontalRule = document.createElement('hr');
+        matchBox.append(horizontalRule);
     }
 )
