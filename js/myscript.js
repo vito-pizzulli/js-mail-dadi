@@ -22,12 +22,12 @@ mailCheckButton.addEventListener('click',
         }
 
         if (access === true) {
-            alert("Accesso consentito!")
+            alert("La mail " + userMail + " da te inserita è autorizzata. Accesso consentito!");
             mailCheck.classList.add('d-none');
             diceGame.classList.remove('d-none');
             diceGame.classList.add('d-block');
         } else {
-            document.getElementById("mail-output").innerHTML = "Accesso negato";
+            document.getElementById("mail-output").innerHTML = "Accesso negato!";
         }
     }
 )
