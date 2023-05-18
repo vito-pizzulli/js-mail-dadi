@@ -1,4 +1,4 @@
-/* Mail */
+/* Mail Login */
 const mailList = [
     "mario@mushroom.com",
     "luigi@fireflower.com",
@@ -9,6 +9,7 @@ const mailCheck = document.querySelector('div.mail-check-section');
 const mailCheckButton = document.querySelector('button.mail-check-button');
 const diceGame = document.querySelector("div.dice-game-section");
 
+/* Button "Verifica" Click Event */
 mailCheckButton.addEventListener('click',
     function() {
         let access = false;
@@ -38,7 +39,8 @@ let winResults = 0;
 let loseResults = 0;
 let tieResults = 0;
 
-/* Gioco dei dadi */
+/* Dice Game */
+/* Button "Nuova Partita" Click Event */
 diceRollButton.addEventListener('click',
     function() {
         matchBox.innerHTML = " ";
@@ -57,6 +59,7 @@ diceRollButton.addEventListener('click',
         let gameResults = document.createElement('p');
         matchBox.append(gameResults);
 
+        /* Current Match Results Output */
         if (playerNumber == computerNumber) {
             gameResults.append("Pareggio!");
             gameResults.classList.add('text-tie');
@@ -71,6 +74,7 @@ diceRollButton.addEventListener('click',
             loseResults++;
         }
 
+        /* Global Results Output */
         let globalResults = document.createElement('p');
         matchBox.append(globalResults);
         globalResults.classList.add("text-results")
