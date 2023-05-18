@@ -112,6 +112,7 @@ button:hover {
 /* XS Layout (from 0px to 576px */
 @media screen and (max-width: 576px) {
     main {
+        font-size: 1rem;
         background-position: center;
     }
 
